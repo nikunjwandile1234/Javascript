@@ -271,4 +271,88 @@ printobj();
     console.log(`DB Connected ${namelogin}`)
 })("pranav")
 
-//loops 
+//loops  
+for(let index=0;index<10;index++)
+{
+    const element=index;
+    if(index===5)
+    {
+        console.log("5 is the best number");
+    }
+    console.log(element);
+}
+
+for(let i=0;i<=10;i++)
+{
+    console.log(`the outer loop ${i}`)
+    for(let j=0;j<=10;j++)
+    {
+    // console.log(`the inner loop ${j}  the outer loop ${i}`)
+    //console.log(i+'*'+j+'='+i*j)
+    }
+}
+
+let thedate=Date();
+console.log(thedate);
+
+let cross=["dighu",'nikunj','pranav']
+for(let i=0;i<cross.length;i++)
+{
+    const elem=cross[i];
+    //console.log(elem);
+}
+
+// for(let i=1;i<20;i++)
+// {
+//     console.log(`the elem is ${i}`);
+// //     if(i==5)
+// //     {
+// //         break;
+// //     }
+// //     else{
+// //         continue;
+// //     }
+// // }
+
+// while loop 
+let ni=0;
+
+while (ni<=10)
+{
+   // console.log(`the index is${ni}`)
+    ni=ni+2;
+}
+
+// let amr=0;
+// while(amr<cross.length)
+// {
+//     const elem=cross[amr];
+//     console.log(elem);
+//     amr++;
+// }
+
+let score=11;
+do{
+   console.log(`the score is${score}`)
+}
+while(score<=10)
+    // for of loop
+const greetings="hello world";
+for (const greet of greetings) {
+    console.log(`the elem is ${greet}`);
+    
+    
+}
+
+// unique value 
+const map =new Map();
+map.set("in","india")
+map.set("usa","usa")
+console.log(map);
+
+for (const [key,value] of map) { // array destructure to print 
+    console.log(key,":-",value); 
+    
+    
+}
+// object is not iteratale ,maps are iteratale ,object are not iteratable on for of   
