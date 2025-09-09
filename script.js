@@ -293,7 +293,7 @@ for(let i=0;i<=10;i++)
 }
 
 let thedate=Date();
-console.log(thedate);
+console.log(thedate.toLocaleString());
 
 let cross=["dighu",'nikunj','pranav']
 for(let i=0;i<cross.length;i++)
@@ -356,3 +356,76 @@ for (const [key,value] of map) { // array destructure to print
     
 }
 // object is not iteratale ,maps are iteratale ,object are not iteratable on for of   
+
+// for in loops
+const obj={
+    cpp: "c++",
+    js: "javascript",
+    java:"java",
+    swift:"swift for apple "
+}
+// for in loopus are for objects maps are not iteratable on object 
+
+for (const key in obj) {
+      console.log(`${key} for language shortcut ${obj[key]}`) 
+        
+    }
+
+    const arr3=["java","swift","c++","ruby"];
+//  for (const [key] in arr3) {
+//         console.log(`${arr3[key]}`);
+        
+//     }
+//     // for in loops doesnt works on the maps iteration 
+
+// arr3.forEach(function(value){
+//     console.log(value);
+// })
+
+
+function print(value,index,arr){
+ console.log(value,index,arr);
+ 
+}
+arr3.forEach(print)
+const coding =[
+    {
+        languagename:"java",
+        languagefilename:"java"
+
+    },
+     {
+        languagename:"javascript",
+        languagefilename:"js"
+
+    },
+     {
+        languagename:"c++",
+        languagefilename:"cpp"
+
+    }
+]
+
+
+// coding.forEach((item)=>{
+//     console.log(`${item.languagename}the filename is${item.languagefilename}`);
+    
+// })
+// use of filter - directly return teh value 
+
+const arr4=[1,2,3,4,5,6,7,8]
+
+const value=arr4.forEach(function (item){
+     console.log(item)
+     return item ;
+})
+
+console.log(value);
+// not returrning the values
+// filter for making the constions on array
+
+const newnums=arr4.filter(function(item) {
+   return num>4
+})
+
+console.log(newnums);
