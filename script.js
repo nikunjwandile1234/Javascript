@@ -364,7 +364,7 @@ const obj={
     java:"java",
     swift:"swift for apple "
 }
-// for in loopus are for objects maps are not iteratable on object 
+// for in loops are for objects maps are not iteratable on object 
 
 for (const key in obj) {
       console.log(`${key} for language shortcut ${obj[key]}`) 
@@ -415,17 +415,65 @@ const coding =[
 
 const arr4=[1,2,3,4,5,6,7,8]
 
-const value=arr4.forEach(function (item){
-     console.log(item)
-     return item ;
-})
+// // const value=arr4.forEach(function (item){
+// //      console.log(item)
+// //      return item ;
+// })
 
-console.log(value);
+// console.log(value);
 // not returrning the values
 // filter for making the constions on array
 
-const newnums=arr4.filter(function(item) {
-   return num>4
-})
+// const newnums=arr4.filter(function(item) {
+//    return num>4
+// })
 
-console.log(newnums);
+// console.log(newnums);
+// map condition 
+// const val1=arr4.map((num)=> num+10)
+// console.log(val1);
+
+// map chaining with filter  left - to right passing with filter(true and false) only filtered true vale passes
+
+const val1= arr4
+.map((num)=>num*10)
+.map((num)=>num+1)
+.filter((num)=> num>=40)
+
+console.log(val1)
+
+
+//reduce method - have acculumlator ancurd value with comma with initial for one time then add sum in next accumulator
+// const arr5=[1,2,3]
+// const total=arr5.reduce(function(acc,cur){
+//     console.log(`the acc is${acc} the curr is${cur}`)
+//     return acc+cur;
+// },8 ) // last one is intiail value for acuumulator
+
+// console.log(total);
+
+const shoppingcart=[
+    {
+        itemname:"webdevcourse",
+        price:15000
+    },
+     {
+        itemname:"data science",
+        price:12999
+    },
+     {
+        itemname:"ml",
+        price:1300
+     },
+     {
+        itemname:"mobile dev",
+        price:1000
+    },
+
+]
+
+
+const totalcart=shoppingcart.reduce((acc,item)=> acc+item.price,0)
+console.log(`the value of ${totalcart}`);
+
+
