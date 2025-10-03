@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events </title>
+  <meta charset="UTF-8">
+  <title>Random Images in List</title>
+  <script src="event1.js"></script>
+  <style>
+    body {
+      background-color: #111; /* Dark background */
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #images {
+      list-style: none; /* Remove bullets */
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #images li {
+      display: inline-block;
+    }
+
+    #images img {
+      width: 250px;
+      height: 180px;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(255,255,255,0.3);
+    }
+
+    #google a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background: #4285F4;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0px 0px 10px rgba(66,133,244,0.6);
+      transition: 0.3s;
+    }
+
+    #google a:hover {
+      background: #66a3ff;
+      box-shadow: 0px 0px 15px rgba(66,133,244,0.9);
+    }
+  </style>
 </head>
 <body>
-    
+  <h1>Random Images with IDs</h1>
+
+  <ul id="images">
+    <li><img id="image1" src="https://picsum.photos/250/180?random=1" alt="Random Image 1"></li>
+    <li><img id="image2" src="https://picsum.photos/250/180?random=2" alt="Random Image 2"></li>
+    <li><img id="image3" src="https://picsum.photos/250/180?random=3" alt="Random Image 3"></li>
+    <li><img id="image4" src="https://picsum.photos/250/180?random=4" alt="Random Image 4"></li>
+    <li><img id="image5" src="https://picsum.photos/250/180?random=5" alt="Random Image 5"></li>
+    <li id="google"><a href="https://www.google.com" target="_blank">Go to Google</a></li>
+  </ul>
+
 </body>
 </html>
+
