@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="makeit">NIKUNJ WANDILE</h1>
+    <button id="start">start</button>
+     <button id="stop">stop</button>
+    <script>
+        let start = document.querySelector('#start');
+        let stop = document.querySelector('#stop');
+        let st; // Declare st in the outer scope
+
+        const changetext = function () {
+            let p = document.querySelector('#makeit');
+            p.textContent = 'SUHANI WANDILE'
+            console.log("SUHANI WANDILE")
+        }
+
+        start.addEventListener('click', function () {
+            st = setInterval(changetext, 3000);
+        })
+
+        stop.addEventListener('click', function () {
+            clearInterval(st);
+            console.log("Event stopped")
+        })
+    </script>
+</body>
+</html>

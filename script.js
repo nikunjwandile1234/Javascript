@@ -435,12 +435,12 @@ const arr4=[1,2,3,4,5,6,7,8]
 
 // map chaining with filter  left - to right passing with filter(true and false) only filtered true vale passes
 
-const val1= arr4
+const val2= arr4
 .map((num)=>num*10)
 .map((num)=>num+1)
 .filter((num)=> num>=40)
 
-console.log(val1)
+console.log(val2)
 
 
 //reduce method - have acculumlator ancurd value with comma with initial for one time then add sum in next accumulator
@@ -476,4 +476,15 @@ const shoppingcart=[
 const totalcart=shoppingcart.reduce((acc,item)=> acc+item.price,0)
 console.log(`the value of ${totalcart}`);
 
+
+
+const val1= arr4
+.map((num)=>num*10)
+.map((num)=>num+1)
+.filter((num)=> num>=40)
+
+console.log(val1)
+// javascrpit is syncronus 
+// javascipt is single threaded
+// javascript always found with its runtime environment 
 

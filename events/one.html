@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="makeit">NIKUNJ WANDILE</h1>
+    <button id="stop">stop</button>
+    <script>
+        const p=document.getElementById('makeit')
+        const marry=function()
+        {
+            let m=document.querySelector('h1')
+            m.textContent="SUHANI WANDILE";
+        }
+
+        let itchanges;
+        const tostop=document.querySelector('#stop');
+
+        function startTimeout() {
+            itchanges = setTimeout(marry, 2000);
+        }
+
+        startTimeout();
+
+        tostop.addEventListener('click',function()
+        {
+            clearTimeout(itchanges);
+            tostop.disabled = true; // optional: disable button after stopping
+        })
+        
+    </script>
+</body>
+</html>
