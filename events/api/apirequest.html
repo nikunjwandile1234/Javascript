@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Card</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top left, #0d0d1a, #1a1a2e);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #141729;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+    }
+
+    button {
+      background: cyan;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #111;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-bottom: 15px;
+    }
+
+    button:hover {
+      background: #00ffffcc;
+      transform: scale(1.05);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .photo, .followers {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #777;
+      font-size: 0.9rem;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .photo img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <button id="loadBtn">Get Info</button>
+    <div class="content">
+      <div class="photo" id="photo">Photo will appear here</div>
+      <div class="followers" id="followers">Followers will appear here</div>
+    </div>
+  </div>
+</body>
+<script>
+    const loadbutton = document.getElementById('loadBtn');
+    const photo = document.getElementById('photo');
+    const followers = document.getElementById('followers');
+
+    loadbutton.addEventListener('click', function() {
+      let requesturl = 'https://api.github.com/users/hiteshchoudhary';
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', requesturl, true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          let data = JSON.parse(xhr.responseText);
+
+        
+          const img = document.createElement('img');
+          img.src = data.avatar_url;
+
+         
+          photo.innerHTML = '';
+          photo.appendChild(img);
+
+          
+          followers.textContent = `Followers: ${data.followers}`;
+        }
+      };
+
+      xhr.send();
+    });
+</script>
+</html>
+
+
