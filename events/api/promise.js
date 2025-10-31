@@ -104,5 +104,18 @@ fetch("https://api.github.com/users/hiteshchoudhary")
 .then((data)=>{
     console.log(data);
 })
-.catch(error)
+.catch((error=>{
+    console.log(error);
+}))
 
+
+const useradi={
+    name:"aditya",
+    procedure:"b.tech"
+
+
+}
+
+fetch("https://api.github.com/users/hiteshchoudhary",{useradi});
+
+//options to get the data and send data using methods post,put,delete
